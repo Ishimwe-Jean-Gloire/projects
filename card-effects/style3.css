@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+.container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  transform-style: preserve-3d;
+  min-height: 80vh;
+  width: 25rem;
+  border-radius: 30px;
+  padding: 0rem 3rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to right bottom,rgba(255,255,255,0.75),rgba(0,204,204,0.50));
+}
+
+.sneaker {
+  min-height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sneaker img {
+  width: 9rem;
+  z-index: 2;
+  transition: all 0.75s ease-out;
+}
+.circle {
+  width: 8rem;
+  height: 8rem;
+  background-image: linear-gradient(to right bottom,rgba(169,77,255,0.75),rgba(0,230,230,1));
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+.info h1 {
+  font-size: 2rem;
+  transition: all 0.75s ease-out;
+}
+.info h3 {
+  font-size: 1rem;
+  padding: 1rem 0rem;
+  color: #585858;
+  font-weight: lighter;
+  transition: all 0.75s ease-out;
+}
+.size
+  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px; 
+  }
+  .size button
+  {
+    border: none;
+    height: 30px;
+    width: 55px;
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px grey;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
+  .size .active
+  {
+    background-image: linear-gradient(to right bottom,rgba(169,77,255,0.75),rgba(0,230,230,1));
+    color: black;
+  }
+.color
+  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    margin-top: 20px; 
+  }
+  .color button
+  {
+    border: none;
+    height: 30px;
+    width: 55px;
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px grey;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
+  .color .active
+  {
+    background-image: linear-gradient(to right bottom,rgba(191,255,0,0.75),grey);
+    color: black;
+  }
+  .color .active2
+  {
+    background-image: linear-gradient(to right bottom,rgba(193,128,255,1),rgba(255,128,0,1));
+    color: black;
+  }
+  .color .active3
+  {
+    background-image: linear-gradient(to right bottom,rgba(169,77,255,0.75),rgba(0,230,230,1));
+    color: black;
+  }
+.purchase {
+  margin-top: 3rem;
+  transition: all 0.75s ease-out;
+}
+.purchase button {
+ display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    background-image: linear-gradient(to right,rgba(0,204,204,0.50),rgba(169,77,255,1),rgba(0,204,204,0.50));
+    font-weight: bolder;
+    color: white;
+}
