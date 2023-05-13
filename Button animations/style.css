@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+body{
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wiggle-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: wiggle 2s linear infinite;
+    transform-origin: 50% 8em;
+    animation-delay: 1s;
+}
+.wiggle-btn:hover{
+    animation: none;
+}
+@keyframes wiggle{
+    0%,
+    5%{
+        transform: rotateZ(0);
+    }
+    15%{
+        transform: rotateZ(-15deg);
+    }
+    20%{
+        transform: rotateZ(10deg);
+    }
+    25%{
+        transform: rotateZ(-10deg);
+    }
+    30%{
+        transform: rotateZ(6deg);
+    }
+    35%{
+        transform: rotateZ(-4deg);
+    }
+    40%,
+    100%{
+        transform: rotateZ(0);
+    }
+}
+.wiggle-btn::before{
+    z-index: 000;
+    content: "";
+    position: absolute;
+    /* background-color: #222; */
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0 5px 25px rgba(2, 2, 2, 0.5);
+}
+.wiggle-btn span{
+    z-index: 222;
+    position: absolute;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-shadow: 0 5px 25xp rgba(2, 2, 2, 1);
+    
+}
+.wiggle-btn .btn-img{
+    z-index: 111;
+    width: 250px;
+}
