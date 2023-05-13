@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLIDESHOW</title>
+</head>
+<body>
+    <img name="slide" width="400" height="200">
+    <script>
+        let i = 0;  //Starting point
+        let images = [];
+        let time = 1000;
+
+        // Images list
+
+        images[0] = 'red.jpg';
+        images[1] = 'dark-green.jpg';
+        images[2] = 'green.jpg';
+        images[3] = 'yellow.jpg';
+        images[4] = 'blue.jpg';
+
+
+        //Change image
+        
+        function changeImg(){
+            document.slide.src = images[i];
+
+            if( i < images.length - 1){
+                i++;
+            }else{
+                i = 0;
+            }
+            setTimeout("changeImg()", time)
+        }
+
+        window.onload = changeImg;
+    </script>
+</body>
+</html>
